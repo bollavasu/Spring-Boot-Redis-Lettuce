@@ -1,0 +1,14 @@
+
+
+
+We need the following for Lettuce Redis client
+1)We don't need any Lettuce maven dependency in pom, because Spring Boot 2.0 default Redis client is Lettuce
+  if we have Redis dependency (spring-boot-starter-data-redis) in pom, it is enough
+2)Lettuce connection pool details are mentioned in application.properties
+3)We use RedisTemplate, StringRedisTemplate to connect with Redis
+  We don't need any configuration class to get RedisTemplate
+  
+  
+mvn clean install
+
+mvn spring-boot:run
